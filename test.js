@@ -20,7 +20,6 @@ function Collatz(num, cache = _cache) {
     }
   }
   count += 1;
-  cache[num] = count;
   return count; 
 }
 
