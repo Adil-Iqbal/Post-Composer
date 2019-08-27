@@ -1,10 +1,16 @@
+const _cache = [0, 1];
+
 const limit = 1000000;
 let maxChain = 0;
 let answer;
 
-function Collatz(num) {
+function Collatz(num, cache = _cache) {
   let count = 0;
-  while(num != 1) {
+  while(true) {
+    if (cache[num]) {
+      count += cache[num];
+      break;
+    }
     if (num % 2 === 0) {
       num /= 2;
       count += 1;
