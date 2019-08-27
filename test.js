@@ -9,8 +9,8 @@ function Collatz(num) {
       num /= 2;
       count += 1;
     } else {
-      num = 3 * num + 1;
-      count += 1;
+      num = (3 * num + 1) / 2;
+      count += 2;
     }
   }
   count += 1;
