@@ -17,7 +17,7 @@ function Collatz(num) {
   return count; 
 }
 
-for (let i = 1; i < limit; i++) {
+for (let i = Math.floor(limit / 2); i < limit; i++) {
   const chain = Collatz(i);
   if (chain > maxChain) {
     maxChain = chain;
